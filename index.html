@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<title>HTML tag Practices</title>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<style>
+			table{
+				font-family: arial, sans-serif;
+				border: 1px solid black;
+				border-collapse: collapse;
+				width: 100%;
+			}
+			td, th{
+				border: 1px solid black;
+				text-align: center;
+				padding: 8px;
+			}
+			tr:nth-children(even){
+				background-color: #dddddd;
+			}
+
+			table#t01 {
+				width: 100%;
+  				background-color: #f1f1c1;
+			}
+
+			table#t02 th{
+				background-color: black;
+				color: white;
+			}
+			table#t02 tr:nth-children(even){
+				background-color: #eee;
+			}
+
+			table#t02 tr:nth-children(odd){
+				background-color: #fff;
+			}
+
+			.Navigation {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  overflow: hidden;
+			  background-color: black;
+			}
+
+			.Navigation li {
+			  float: left;
+			}
+
+			.Navigation li a {
+			  display: block;
+			  color: white;
+			  text-align: center;
+			  padding: 16px;
+			  text-decoration: none;
+			}
+
+			.Navigation li a:hover {
+			  background-color: #111111;
+			}
+
+			.cities {
+			  background-color: black;
+			  color: white;
+			  margin: 20px;
+			  padding: 20px;
+			}
+
+			span.note {
+			  font-size: 120%;
+			  color: red;
+			}
+
+			.city {
+			  background-color: tomato;
+			  color: white;
+			  padding: 10px;
+			} 
+
+			.main {
+			  text-align: center;
+			}
+
+			#myHeader {
+				background-color: lightblue;
+				color: black;
+				padding: 40px;
+				text-align: center;
+			}
+
+			/*CSS Layout Float*/
+			*{
+				box-sizing: border-box;
+			}
+			body{
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			/*Style the header*/
+			header{
+				background-color:#666;
+				padding: 30px;
+				text-align: center;
+				font-size: 35px;
+				color: white;
+			}
+			/*Container for flexboxes*/
+			section{
+				display: -webkit-flex;
+				display: flex;
+			}
+			/*Style the navigation menu*/
+			nav{
+				-webkit-flex:1;
+				-ms-flex:1;
+				  flex: 1;
+				background: #ccc;
+				padding: 20px;
+			}
+			/* Style the list inside the menu */
+			nav ul{
+				list-style-type: none;
+				padding: 0;
+			}
+			/* Style the content */
+			article{
+				-webkit-flex: 3;
+				-ms-flex: 3;
+				flex: 3;
+				background-color:#f1f1f1;
+				height: 300px;
+			}
+			/*Style the footer*/
+			footer{
+				background-color: #777;
+				padding:10px;
+				text-align: center;
+				color: white;
+			}
+			/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+			@media (max-width: 1000px) {
+			  section {
+			    -webkit-flex-direction: column;
+    			flex-direction: column;
+			  }			
+			}
+
+			.menu{
+				float: left;
+				width: 20%;
+			}
+			.menuitem{
+				padding: 8px;
+				margin-top: 7px;
+				border-bottom: 1px solid #f1f1f1;
+			}
+			.main{
+				float: left;
+				width: 60%;
+				padding: 0 20px;
+				overflow: hidden;
+			}
+			.right {
+			  background-color: lightblue;
+			  float: left;
+			  width: 20%;
+			  padding: 10px 15px;
+			  margin-top: 7px;
+			}
+			@media only screen and (max-width:800px) {
+			  /* For tablets: */
+			  .main {
+			    width: 80%;
+			    padding: 0;
+			  }
+			  .right {
+			    width: 100%;
+			  }
+			}
+			@media only screen and (max-width:500px) {
+			  /* For mobile phones: */
+			  .menu, .main, .right {
+			    width: 100%;
+			  }
+			}
+		</style>
+	</head>
+	<body >
+		<h1 title="I'm a header" style=" color:blue; font-family:veradana; font-size: 60px; text-align: center;">What is HTML?</h1>
+		<hr>
+		<p style="color:red; font-family:courier; font-size:160%; text-align:center; font-size:1.5vw; ">HTML is the standard markup language for creating Web pages.</p>
+		<hr>
+		
+		<h2>This is heading 2</h2>
+		<h3>This is heading 3</h3>
+		<h4>This is heading 2</h4>
+		<h5>This is heading 2</h5>
+		<h6>This is heading 2</h6>
+		<hr>
+		
+		<!-- HTML links -->
+		<a href="https://www.w3schools.com/default.asp" target="_blank" 
+			title="Go to W3Schools"><img src="images/w3schools.jpg" 
+			alt="W3Schools.com" style="width:142px;height:142px;border:0"></a>
+		<hr>
+		
+		<!-- HTML Images -->
+		<img src="images/w3schools.jpg" alt="W3Schools.com" width="100%">
+		<hr>
+		
+		<p style="font-size:1.5vw;"><a href="#git">Jump to Git: The Beginner's Guide to Understanding Core Version Control Concepts</a></p>
+		<!-- HTML Buttons -->
+		<button>Click me</button>
+		<hr>
+		
+		<!-- An Unordered HTML List   -->
+		<ul>
+			<li>Money</li>
+			<li>Education</li>
+			<li>Food</li>
+			<li>Health</li>
+		</ul>
+		<hr>
+		
+		<!-- An Ordered HTML List   -->
+		<ol>
+			<li>Money</li>
+			<li>Education</li>
+			<li>Food</li>
+			<li>Health</li>
+		</ol>
+		<hr>
+		
+		<p title="Sit Down, Sad Soul - Poem by 'Barry Cornwall'" style="font-size:1.5vw;">SIT down, sad soul, and count <br> The moments flying: <br> Come,—tell the sweet amount <br>
+		That ’s lost by sighing! <br> How many smiles?—a score? <br> Then laugh, and count no more;<br>For day is dying. </p>
+		<hr>
+		
+		<!-- Size and alt Attributes -->
+		<img src="images/img_girl.jpg" alt="Girl with a jacket" style="max-width:100%;height:auto;">
+		<hr>
+		
+		<!-- The style Attribute -->
+		<p style="color: red; font-size:1.5vw; "><b>Look at that cypress with its branches drooping, in it woe and lament are trooping; Its foliage is painted a yellow melancholy, Its spirits are trying to whisper something holy; Its burden is not at all light, in it dwells a penitent sprite; to express her sins in tears, so that no one but God hears!</b></p>
+		<hr>
+
+		<pre>
+			<i>
+			These eyes of mine cry
+			This heart of mine bleeds
+			This soul of mine breaks
+			As i slowly die, the colours
+			of my face fade and my once
+			happy life is know like the walls
+			of a dungeon, black, dark and
+			empty with no one there to comfort
+			me and the one person i thought
+			would be there is the farthest one away
+		</i>
+		</pre>
+
+		<p style="font-size:1.5vw;">This is <sub>subscript</sub>and <sup>superscript</sup></p>
+
+		<p style="font-size:1.5vw;"><strong>There was a man whom Sorrow named his friend</strong></p>
+
+		<p style="font-size:1.5vw;"><em>
+			As I started sipping
+			my daily lovely coffee
+			A race of memories just began in my mind
+			of old days, the hard and the easy
+			And looking at myself now with a tear in my eye
+			just to find myself sad and lonely</em></p>
+
+		<h2>HTML<small>Small</small> Formatting</h2>
+
+		<p style="font-size:1.5vw;">We all walk like <mark>everything is fine,</mark> But we all know we are <mark>all mad.</mark> </p>
+		
+		<p style="font-size:1.5vw;">We are sad for <del>teen mothers</del>, We are sad for <del>lost ones</del>, We are sad for <del>people we love</del></p>
+
+		<p style="font-size:1.5vw;"> A happy lot, us Sad Bastards. We 
+			raise our glasses Kick some asses Laugh, tell rude 
+			jokes. Give the fire a poke and throw on another log. We talk of locks And untimely 
+			clocks and stocks and shares and dual-purpose chairs play the organ, sing and giggle
+			Until 3 in the morning when mutually yawning we tuck ourselves into bed. <ins> A happy lot Us Sad Bastards. </ins> </p>
+
+		<p style="font-size:1.5vw;">Here is a quote from WWF's website:</p>
+		<blockquote cite="http://www.worldwildlife.org/who/index.html">
+		For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+		</blockquote>
+
+		<p style="font-size:1.5vw;">WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+
+		<p style="font-size:1.5vw;">The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+		<address>
+			Written by John Doe.<br>
+			Visit us at:<br>
+			Example.com<br>
+			Box 564, Disneyland<br>
+			USA
+		</address>
+
+		<img src="images/img_the_scream.jpg" width="220" height="277" alt="The Scream">
+		<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+		<bdo dir="rtl">I LOVE FARIHA</bdo>
+
+		<h1 style="background-color:Tomato;">Tomato</h1>
+		<h1 style="background-color:MediumSeaGreen;">MediumSeaGreen</h1>
+		<h1 style="background-color:Gray;">Gray</h1>
+		<h1 style="background-color:SlateBlue;">SlateBlue</h1>
+		<h1 style="background-color:Violet;">Violet</h1>
+		<h1 style="background-color:LightGray;">LightGray</h1>
+
+		<p style="color:MediumSeaGreen; font-size:1.5vw; ">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+
+		<p style="border:2px solid Tomato; font-size:1.5vw;"> With how sad steps, O Moon, thou climb'st the skies! How silently, and with how wan a face! What! May it be that even in heavenly place That busy archer his sharp arrows tries? Sure, if that long-with-love-acquainted eyes Can judge of love, thou feel'st a lover's case: I read it in thy looks; thy languished grace To me, that feel the like, thy state descries. Then, even of fellowship, O Moon, tell me, Is constant love deemed there but want of wit? Are beauties there as proud as here they be? Do they above love to be loved, and yet Those lovers scorn whom that love doth possess? Do they call 'virtue' there— ungratefulness?</p>
+
+		<h1 style="background-color:rgb(255, 99, 71);">rgb(255, 99, 71)</h1>
+		<h1 style="background-color:#ff6347;">#ff6347</h1>
+		<h1 style="background-color:hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</h1>
+
+		<h1 style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</h1>
+		<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</h1>
+
+		<a href="https://www.freecodecamp.org/news/git-the-laymans-guide-to-understanding-the-core-concepts/" target="_blank" style="text-decoration: none;" title="Git: The Beginner's Guide"  id="git" >
+			<h2 >Git: The Beginner's Guide to Understanding Core Version Control Concepts</h2>
+		</a>
+		
+		<!-- Animated Images -->
+		<img src="images/programming.gif" alt="Computer man" style="width:148px;height:148px;">
+		
+		<img src="images/workplace.jpg" alt="Workplace" usemap="#workmap" width= 100%>
+
+		<map name="workmap">
+  			<area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  			<area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  			<area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+		</map>
+		<hr>
+
+		<!-- The picture Element -->
+		<picture>
+		  <source media="(max-width: 600px)" srcset="images/img_pink_flowers.jpg">
+		  <source media="(max-width: 1500px)" srcset="images/img_white_flower.jpg">
+		  <img src="images/img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+		</picture>
+
+
+		<p><strong>Note:</strong> The picture element is not supported in IE12 and earlier or Safari 9.0 and earlier.</p>
+
+		<table>
+			<caption>HTML Tables</caption>
+			<tr>
+				<th>Company</th>
+				<th>Contact</th>
+				<th>Country</th>
+			</tr>
+			<tr>
+				<td>Vanessa Ives</td>
+				<td>Maria Anders 	</td>
+				<td>Germany</td>
+			</tr>
+			<tr>
+				<td>Ethan Chandler</td>
+				<td>Francisco Chang</td>
+				<td>Mexico</td>
+			</tr>
+			<tr>
+				<td>Sir Malcolm Murray</td>
+				<td>Roland Mendel</td>
+				<td>Austria</td>
+			</tr>
+			<tr>
+				<td>Victor Frankenstein</td>
+				<td>Helen Bennett</td>
+				<td>UK</td>
+			</tr>
+		</table>
+
+		<table id="t01">
+			<caption>Styling Tables</caption>
+			<tr>
+				<th>Firstname</th>
+				<th>Lastname</th>
+				<th>Age</th>
+			</tr>
+			<tr>
+				<td>Jill</td>
+				<td>Smith</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td>Eve</td>
+				<td>Jackson</td>
+				<td>94</td>
+			</tr>
+			<tr>
+				<td>John</td>
+				<td>Doe</td>
+				<td>80</td>
+			</tr>
+		</table>
+
+		<table id="t02">
+			<caption>TABLE</caption>
+			<tr>
+				<th>Activity</th>
+				<th># of Participants Reporting Activity (Out of 391 Total)</th>
+				<th>% of All Sadomasochistic Acts Rported</th>
+			</tr>
+			<tr>
+				<td>Biting</td>
+				<td>166</td>
+				<td>11%</td>
+			</tr>
+			<tr>
+				<td>Bondage</td>
+				<td>183</td>
+				<td>12%</td>
+			</tr>
+			<tr>
+				<td>Clothespins/Clamps</td>
+				<td>52</td>
+				<td>3%</td>
+			</tr>
+			<tr>
+				<td>Cutting</td>
+				<td>11</td>
+				<td> <1%</td>
+			</tr>
+			<tr>
+				<td>Electric Shocks</td>
+				<td>17</td>
+				<td>1%</td>
+			</tr>
+			<tr>
+				<td>Face Slapping</td>
+				<td>91</td>
+				<td>6%</td>
+			</tr>
+		</table>
+
+		<!-- Unordered HTML List with Square Bullets  -->
+		<ul style="list-style-type: square;">
+			<li>Money</li>
+			<li>Education</li>
+			<li>Food</li>
+			<li>Health</li>
+		</ul>
+
+		<!-- Ordered List with Lowercase Roman Numbers  -->
+		<ol type="i">
+			<li>Money</li>
+			<li>Education</li>
+			<li>Food</li>
+			<li>Health</li>
+		</ol>
+
+		<!-- A Description List -->
+		<dl>
+		  <dt>Coffee</dt>
+		  <dd>- black hot drink</dd>
+		  <dt>Milk</dt>
+		  <dd>- white cold drink</dd>
+		</dl>
+
+		<!-- A Nested List -->
+		<ul>
+		  <li>Coffee</li>
+		  <li>Tea
+		    <ul>
+		      <li>Black tea</li>
+		      <li>Green tea</li>
+		    </ul>
+		  </li>
+		  <li>Milk</li>
+		</ul>
+
+		<!-- The start attribute -->
+		<ol start="50">
+		  <li>Coffee</li>
+		  <li>Tea</li>
+		  <li>Milk</li>
+		</ol>
+
+		<ol type="I" start="50">
+		  <li>Coffee</li>
+		  <li>Tea</li>
+		  <li>Milk</li>
+		</ol>
+
+		<ul class="Navigation">
+		  <li><a href="#home">Home</a></li>
+		  <li><a href="#news">News</a></li>
+		  <li><a href="#contact">Contact</a></li>
+		  <li><a href="#about">About</a></li>
+		</ul>
+
+		<div style="background-color:black;color:white;padding:20px; margin-top: 20px">
+		  <h2>London</h2>
+		  <p style="font-size:1.5vw;">London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+		  <p style="font-size:1.5vw;">Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+		</div> 
+
+		<h1>My <span style="color:violet">Important</span> Heading</h1>
+
+		<div class="cities">
+		<h2>London</h2>
+		<p style="font-size:1.5vw;">London is the capital of England.</p>
+		</div> 
+
+		<div class="cities">
+		<h2>Paris</h2>
+		<p style="font-size:1.5vw;">Paris is the capital of France.</p>
+		</div>
+
+		<p style="font-size:1.5vw;">This is some <span class="note">important</span> text.</p>
+
+		<!-- Multiple Classes -->
+		<h2 class="city main">London</h2>
+		<h2 class="city">Paris</h2>
+		<h2 class="city">Tokyo</h2>
+
+		<!-- Using The class Attribute in JavaScript -->
+		<button onclick="myFunction()">Hide elements</button>
+		<h2 class="mycity">London</h2>
+		<p style="font-size:1.5vw;">London is the capital of England.</p>
+		<h2 class="mycity">Paris</h2>
+		<p style="font-size:1.5vw;">Paris is the capital of France.</p>
+		<h2 class="mycity">Tokyo</h2>
+		<p style="font-size:1.5vw;">Tokyo is the capital of Japan.</p>
+		<script>
+		function myFunction() 
+		{
+		  var x = document.getElementsByClassName("mycity");
+		  for (var i = 0; i < x.length; i++) 
+		  {
+		    x[i].style.display = "none";
+		  }
+		}
+		</script> 
+
+		<!-- Using The id Attribute in JavaScript -->
+		<h1 id="myHeader">My Header</h1>
+		<button onclick="displayResult()">Change text</button>
+		<script>
+		function displayResult() {
+		  document.getElementById("myHeader").innerHTML = "Have a nice day!";
+		}
+		</script>
+
+		<!-- The id Attribute -->
+		<h1 id="myHeader">Hello World!</h1>
+
+		<!-- My First JavaScript -->
+		<button type="button"onclick="document.getElementById('datetimedemo').innerHTML = Date()">Click me to display Date and Time.</button>
+		<p id="datetimedemo" style="font-size:1.2vw;"></p>
+		<hr>
+
+		<!-- My First JavaScript -->
+		<p id="demo" style="font-size:1.2vw;">JavaScript can change the style of an HTML element.</p>
+		<script>
+		function myFunction() {
+		  document.getElementById("demo").style.fontSize = "25px"; 
+		  document.getElementById("demo").style.color = "red";
+		  document.getElementById("demo").style.backgroundColor = "yellow";
+		}
+		</script>
+		<button type="button" onclick="myFunction()">Click Me!</button>
+		<hr>
+
+		<script>
+		function light(sw) {
+		  var pic;
+		  if (sw == 0) {
+		    pic = "images/pic_bulboff.gif"
+		  } else {
+		    pic = "images/pic_bulbon.gif"
+		  }
+		  document.getElementById('myImage').src = pic;
+		}
+		</script>
+		<img id="myImage" src="images/pic_bulboff.gif" width="100" height="180">
+
+		<p style="font-size:1.2vw;">
+		<button type="button" onclick="light(1)">Light On</button>
+		<button type="button" onclick="light(0)">Light Off</button>
+		</p>
+
+
+		<iframe height="300px" width="100%" src="demo_iframe.htm" name="iframe_a"></iframe>
+		<p style="font-size: 1.2vw;"><a href="http://www.aiub.edu/" target="iframe_a">American International University-Bangladesh (AIUB)</a></p>
+		<hr>
+
+		<!-- CSS Layout Float -->
+		<header>
+			<h2>Cities</h2>
+		</header>
+
+		<section>
+			<nav>
+				<ul>
+					<li><a href="#">London</a></li>
+					<li><a href="#">Paris</a></li>
+					<li><a href="#">Tokyo</a></li>
+				</ul>
+			</nav>
+			<article>
+				<h2>London</h2>
+				<p style="font-size: 1.2vw;">London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+				<p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+			</article>
+		</section>
+
+		<footer>
+			<p style="font-size:1.2vw;">Footer</p>
+		</footer>
+		<hr>
+
+		<div style="background-color:#f1f1f1; padding:15px;">
+			<h2>Cinque Terre</h2>
+			<h3>Resize the browser window</h3>
+		</div>
+		<div style="overflow: auto;">
+			<div class="menu">
+				<div class="menuitem">
+					The Walk
+				</div>
+				<div class="menuitem">
+					Transport
+				</div>
+				<div class="menuitem">
+					History
+				</div>
+				<div class="menuitem">
+					Gallery
+				</div>
+			</div>
+			<div class="main">
+				<h3>The Walk</h3>
+				<p style="font-size:1.2vw;">The walk from Monterosso to Riomaggiore will take you approximately two hours, give or take an hour depending on the weather conditions and your physical shape.</p>
+				<img src="images/img_5terre.jpg" style="width:100%">
+			</div>
+			<div class="right">
+				<h3>What?</h3>
+				<p style="font-size:1.2vw;">Cinque Terre comprises five villages: Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore</p>
+				<h3>Where?</h3>
+				<p style="font-size:1.2vw;">On the northwest cost of the Italian Riviera, north of the city La Spezia.</p>
+				<h3>Price?</h3>
+	    		<p style="font-size:1.2vw;">The Walk is free!</p>
+			</div>
+		</div>
+		<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> 
+			<p style="font-size: 1.2vw;">This web page is a part of a demonstration of fluid web design made by w3schools.com. Resize the browser window to see the content respond to the resizing.</p>
+		</div>
+		<hr>
+
+		<div class="w3-container w3-green">
+			<h1>W3Schools Demo</h1>
+			<p style="font-size: 1.5vw;">Resize this responsive page!</p>
+		</div>
+
+		<div class="w3-row-padding">
+			<div class="w3-third">
+				<h2>London</h2>
+				<p style="font-size: 1.2vw;">London is the capital city of England.</p>
+				<p style="font-size: 1.2vw;">It is the most populous city in the United Kingdom,
+    			with a metropolitan area of over 13 million inhabitants.</p>
+			</div>
+			  <div class="w3-third">
+			    <h2>Paris</h2>
+			    <p style="font-size: 1.2vw;">Paris is the capital of France.</p> 
+			    <p style="font-size: 1.2vw;">The Paris area is one of the largest population centers in Europe,
+			    with more than 12 million inhabitants.</p>
+			  </div>
+
+			  <div class="w3-third">
+			    <h2>Tokyo</h2>
+			    <p style="font-size: 1.2vw;">Tokyo is the capital of Japan.</p>
+			    <p style="font-size: 1.2vw;">It is the center of the Greater Tokyo Area,
+			    and the most populous metropolitan area in the world.</p>
+			  </div>
+		</div>
+
+		<!-- The var Element -->
+		<p style="font-size: 1.5vw;">Einstein wrote: <var>E</var> = <var>mc</var><sup>2</sup>.</p>
+
+		<figure>
+		  <img src="images/pic_trulli.jpg" alt="Trulli" style="max-width:100%; height: auto;">
+		  <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+		</figure>
+
+	</body>
+</html>
